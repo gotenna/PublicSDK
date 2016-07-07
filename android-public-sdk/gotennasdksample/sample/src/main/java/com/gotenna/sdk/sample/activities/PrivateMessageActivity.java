@@ -122,7 +122,7 @@ public class PrivateMessageActivity extends MessageActivity
         if (receiverContact != null &&
                 currentUser != null &&
                 incomingMessage.getSenderGID() == receiverContact.getGid() &&
-                incomingMessage.getReceiverGID() == currentUser.gId)
+                incomingMessage.getReceiverGID() == currentUser.getGID())
         {
             messagesList.add(incomingMessage);
             updateMessagingUI();

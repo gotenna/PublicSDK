@@ -122,7 +122,7 @@ public class Message
 
         if (currentUser != null)
         {
-            return senderGID == currentUser.gId;
+            return senderGID == currentUser.getGID();
         }
 
         return false;

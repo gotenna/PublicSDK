@@ -61,7 +61,7 @@ public class ContactsManager
         List<Contact> contactsExcludingSelfList = new ArrayList<>();
 
         User currentUser = UserDataStore.getInstance().getCurrentUser();
-        long currentUserGid = currentUser == null ? 0 : currentUser.gId;
+        long currentUserGid = currentUser == null ? 0 : currentUser.getGID();
 
         for (Contact contact : contactArrayList)
         {

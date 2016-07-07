@@ -31,10 +31,13 @@
 + (GTCommandCenter *)shared;
 
 /**
- *  This is essentially a ping to your goTenna to make sure that it's connected and functioning
+ *  Sends an echo command to the connected goTenna.
+ *  Upon receiving an echo the goTenna's LED will flash.
  *
- *  @param onResponse called when your goTenna responds with a postive or negative acknowledgement
- *  @param onError    required, called when an error occurs (See error code for details)
+ *  No actual message is transmitted when an echo is sent.
+ *
+ *  @param onResponse The response listener callback for the command.
+ *  @param onError The error listener callback for the command.
  */
 - (void)sendEchoCommand:(void (^)(GTResponse *))onResponse onError:(void (^)(NSError *))onError;
 

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<frequency-channels>
-	<frequency-channel mhz="151.82"/>
-	<frequency-channel mhz="151.88"/>
-	<frequency-channel mhz="151.94"/>
-	<frequency-channel mhz="154.57"/>
-	<frequency-channel mhz="154.60" isControlChannel="true"/>
-</frequency-channels>

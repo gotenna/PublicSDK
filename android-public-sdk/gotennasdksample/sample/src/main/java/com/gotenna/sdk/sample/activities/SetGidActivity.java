@@ -93,7 +93,7 @@ public class SetGidActivity extends ChildActivity
 
         if (currentUser != null)
         {
-            sendSetGidCommand(currentUser.name, currentUser.gId);
+            sendSetGidCommand(currentUser.getName(), currentUser.getGID());
         }
     }
 
@@ -113,8 +113,8 @@ public class SetGidActivity extends ChildActivity
         }
         else
         {
-            usernameTextView.setText(getString(R.string.current_username_text, currentUser.name));
-            gidTextView.setText(getString(R.string.current_gid_text, currentUser.gId));
+            usernameTextView.setText(getString(R.string.current_username_text, currentUser.getName()));
+            gidTextView.setText(getString(R.string.current_gid_text, currentUser.getGID()));
         }
     }
 

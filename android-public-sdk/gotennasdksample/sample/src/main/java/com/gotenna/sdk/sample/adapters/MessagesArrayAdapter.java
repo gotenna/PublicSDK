@@ -162,7 +162,7 @@ public class MessagesArrayAdapter extends ArrayAdapter<Message>
 
         if (currentUser != null)
         {
-            if (message.getSenderGID() == currentUser.gId)
+            if (message.getSenderGID() == currentUser.getGID())
             {
                 return true;
             }

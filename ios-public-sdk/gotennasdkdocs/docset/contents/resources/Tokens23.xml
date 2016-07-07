@@ -62,17 +62,18 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/GTCommandCenter/sendEchoCommand:onError:</TokenIdentifier>
-			<Abstract type="html">This is essentially a ping to your goTenna to make sure that it&apos;s connected and functioning</Abstract>
+			<Abstract type="html">Sends an echo command to the connected goTenna.
+Upon receiving an echo the goTenna&apos;s LED will flash.</Abstract>
 			<DeclaredIn>GTCommandCenter.h</DeclaredIn>
 			
 			<Declaration>- (void)sendEchoCommand:(void ( ^ ) ( GTResponse *))onResponse onError:(void ( ^ ) ( NSError *))onError</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>onResponse</Name>
-					<Abstract type="html">called when your goTenna responds with a postive or negative acknowledgement</Abstract>
+					<Abstract type="html">The response listener callback for the command.</Abstract>
 				</Parameter><Parameter>
 					<Name>onError</Name>
-					<Abstract type="html">required, called when an error occurs (See error code for details)</Abstract>
+					<Abstract type="html">The error listener callback for the command.</Abstract>
 				</Parameter>
 			</Parameters>
 			

@@ -15,4 +15,5 @@
 @property(nonatomic, copy) NSString *goTennaSerialNumber;
 
 - (NSString *)asString;
+- (NSNumber*)batteryLevelPercentage;
 @end

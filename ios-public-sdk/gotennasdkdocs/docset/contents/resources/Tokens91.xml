@@ -420,6 +420,18 @@
             <NodeRef refid="91"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SystemInfoResponseData/batteryLevelPercentage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SystemInfoResponseData.h</DeclaredIn>
+			
+			<Declaration>- (NSNumber *)batteryLevelPercentage</Declaration>
+			
+			
+			<Anchor>//api/name/batteryLevelPercentage</Anchor>
+            <NodeRef refid="91"/>
+		</Token>
+		
         
 	</File>
 </Tokens>

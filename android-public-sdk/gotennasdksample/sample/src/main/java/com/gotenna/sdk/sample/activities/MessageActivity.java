@@ -140,7 +140,7 @@ public abstract class MessageActivity extends ChildActivity implements IncomingM
             return;
         }
 
-        Message messageToSend = Message.createReadyToSendMessage(currentUser.gId, receiverGID, messageText);
+        Message messageToSend = Message.createReadyToSendMessage(currentUser.getGID(), receiverGID, messageText);
         boolean didSend = sendMessage(messageToSend, isBroadcast);
 
         if (didSend)

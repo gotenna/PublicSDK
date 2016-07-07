@@ -123,7 +123,7 @@ public class CreateGroupActivity extends ChildActivity implements GTGroupInviteR
         {
             long contactGID = contact.getGid();
 
-            if (contactGID != currentUser.gId)
+            if (contactGID != currentUser.getGID())
             {
                 groupInvitationList.add(new GroupInvitation(contact, GroupInvitationState.SENDING));
             }
@@ -189,7 +189,7 @@ public class CreateGroupActivity extends ChildActivity implements GTGroupInviteR
 
                 for (Contact contact : allContactsList)
                 {
-                    if (contact.getGid() != currentUser.gId)
+                    if (contact.getGid() != currentUser.getGID())
                     {
                         groupInvitationList.add(new GroupInvitation(contact, GroupInvitationState.RECEIVED));
                     }
