@@ -178,9 +178,9 @@ class Gateway:
         self._driver = goTenna.driver.Driver(gotenna_sdk_token,
                                              goTenna.settings.GID.gateway(),
                                              settings, self.gotenna_event_callback,
-                                             device_types=(goTenna.driver.Driver.DEVICE_900,),
+                                             device_types=(goTenna.driver.Driver.DEVICE_TYPES),
                                              shortname='CRN',
-                                             storage=self._storage, 
+                                             storage=self._storage,
                                              do_automatic_connect=False)
         self._advertise_pacing = advertise_pacing
         self._advertise_timer = None
@@ -351,7 +351,7 @@ def interact():
     logging.basicConfig(level=logging.INFO)
     code.interact(banner='goTenna Gateway',
                   local={'g': g,
-                         'goTenna': goTenna, 
+                         'goTenna': goTenna,
                          'd': g._driver})
 
 
