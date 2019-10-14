@@ -42,7 +42,7 @@ class goTennaCLI(cmd.Cmd):
         self._set_bandwidth = False
         self._set_geo_region = False
         self._settings = goTenna.settings.GoTennaSettings(
-            rf_settings=goTenna.settings.RFSettings(), 
+            rf_settings=goTenna.settings.RFSettings(),
             geo_settings=goTenna.settings.GeoSettings())
         self._do_encryption = True
         self._awaiting_disconnect_after_fw_update = [False]
@@ -62,17 +62,17 @@ class goTennaCLI(cmd.Cmd):
             return
         try:
             if not SPI_CONNECTION:
-                self.api_thread = goTenna.driver.Driver(sdk_token=rst, gid=None, 
-                                                    settings=None, 
+                self.api_thread = goTenna.driver.Driver(sdk_token=rst, gid=None,
+                                                    settings=None,
                                                     event_callback=self.event_callback)
             else:
                 self.api_thread = goTenna.driver.SpiDriver(
                                     SPI_BUS_NO, SPI_CHIP_NO, 22, 27,
                                     rst, None, None, self.event_callback)
             self.api_thread.start()
-        except ValueError:
-            print("SDK token {} is not valid. Please enter a valid SDK token."
-                  .format(rst))
+        except ValueError as error:
+            print("Unable to create driver with SDK token {}. Error: {}"
+                  .format(rst, error))
 
     def emptyline(self):
         pass
@@ -433,7 +433,7 @@ class goTennaCLI(cmd.Cmd):
     def do_set_emergency_beacon(self, enabled):
         """ Enable or disable an emergency beacon
 
-        Usage: 
+        Usage:
             enable emergency beacon: set_emergency_beacon 1
             disable emergency beacon: set_emergency_beacon 0
         """
